@@ -22,7 +22,7 @@ namespace CS_Form
             {
                 
                 a = a + 50;
-                TestButton testButton = new TestButton(a, b, 50, 50);
+                TestButton testButton = new TestButton(i,a, b, 50, 50);
 
                 Controls.Add(testButton);
 
