@@ -15,6 +15,22 @@ namespace CS_Form
         public Form1()
         {
             InitializeComponent();
+            int i;
+            int a = 0;
+            int b = 10;
+            for (i = 1; i <= 10; i++)
+            {
+                
+                a = a + 50;
+                TestButton testButton = new TestButton(a, b, 50, 50);
+
+                Controls.Add(testButton);
+
+                //TestButton testButton2 = new TestButton(100, 100, 100, 100);
+
+                //Controls.Add(testButton2);
+            }
+
         }
     }
 }
