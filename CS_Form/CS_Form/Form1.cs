@@ -12,25 +12,34 @@ namespace CS_Form
 {
     public partial class Form1 : Form
     {
+        TestLabel _testLabel;
+
         public Form1()
         {
             InitializeComponent();
-            int i;
-            int a = 0;
-            int b = 10;
-            for (i = 1; i <= 10; i++)
+
+            string[] buttonTexts = { "神野", "天野", "松本", "長澤", "宇都宮", "ヴィ", "相沢", "平井", "伊藤" };
+
+            for (int i = 0; i < 10; i++)
             {
-                
-                a = a + 50;
-                TestButton testButton = new TestButton(i,a, b, 50, 50);
-
+                TestButton testButton = new TestButton(this, i, (i % 5) * 100, (i / 5) * 100, 100, 100);
+                testButton.Text = buttonTexts[i];
                 Controls.Add(testButton);
-
-                //TestButton testButton2 = new TestButton(100, 100, 100, 100);
-
-                //Controls.Add(testButton2);
             }
 
+            _testLabel = new TestLabel("らべるです。", 10, 300, 100, 500);
+            Controls.Add(_testLabel);
+
+            //Label label = new label();
+            //label.Location = new Point(30,400);
+            //label.Text = "ラベルです";
+
+            //Controls.Add(label);
+        }
+            public void LabelTextUpdate(string str)
+            { 
+                _testLabel.TextUpdate(str);
+            }
         }
     }
-}
+

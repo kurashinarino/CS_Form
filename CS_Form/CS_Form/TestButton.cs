@@ -10,15 +10,19 @@ using System.Windows.Forms;
 
 namespace CS_Form
 {
-    internal class TestButton : Button
+    class TestButton : Button
     {
+        Form1 _form1;
         ///<cummary>
         ///コンストラクタ
         ///クラスを生成したときに呼び出される
         ///</cummary>
 
-        public TestButton(int id,int x, int y, int width, int height)
+        public TestButton(Form1 form1,int id,int x, int y, int width, int height)
         {
+
+            _form1 = form1;
+
             //ClickイベントにOnClick関数を登録
             //ボタンをクリックしたときに登録した関数を実行します
             Click += OnClick;
