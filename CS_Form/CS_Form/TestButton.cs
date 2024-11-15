@@ -22,11 +22,9 @@ namespace CS_Form
         {
 
             _form1 = form1;
-
             //ClickイベントにOnClick関数を登録
             //ボタンをクリックしたときに登録した関数を実行します
             Click += OnClick;
-
             Text = id .ToString();
 
             Location = new Point(x, y);
@@ -40,7 +38,7 @@ namespace CS_Form
 
         public void OnClick(object sender, EventArgs e)
         {
-            MessageBox.Show("(-_-)zzz");
+            _form1.LabelTextUpdate(Text);
         }
 
 

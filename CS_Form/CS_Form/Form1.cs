@@ -18,7 +18,7 @@ namespace CS_Form
         {
             InitializeComponent();
 
-            string[] buttonTexts = { "神野", "天野", "松本", "長澤", "宇都宮", "ヴィ", "相沢", "平井", "伊藤" };
+            string[] buttonTexts = {"LUNAR", "神野", "天野", "松本", "長澤", "宇都宮", "ヴィ", "相沢", "平井", "伊藤" };
 
             for (int i = 0; i < 10; i++)
             {
