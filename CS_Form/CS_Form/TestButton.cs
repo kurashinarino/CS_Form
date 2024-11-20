@@ -33,12 +33,17 @@ namespace CS_Form
         ///<summary>
         ///ボタンをクリックした際の処理を記入する
         ///</summary>
-        ///<param name="sender"></param>
+        ///<param name="sender">-
+        ///</param>
         ///<param name="e"></param>
 
         public void OnClick(object sender, EventArgs e)
         {
-            _form1.LabelTextUpdate(Text);
+            string t = _form1.ButtonLabelReplacement(Text);
+
+            Text = t;
+
+            //_form1.LabelTextUpdate(Text);
         }
 
 

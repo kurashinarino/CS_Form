@@ -13,7 +13,7 @@ namespace CS_Form
     public partial class Form1 : Form
     {
         TestLabel _testLabel;
-        TextBox _textBox;
+        TestTextBox _textBox;
 
         public Form1()
         {
@@ -25,7 +25,7 @@ namespace CS_Form
             {
                 TestButton testButton = new TestButton(this, i, (i % 5) * 100, (i / 5) * 100, 100, 100);
                 testButton.Text = buttonTexts[i];
-                testButton.Click += (sender, e) => SwapText((TestButton)sender);
+                //testButton.Click += (sender, e) => SwapText((TestButton)sender);
                 Controls.Add(testButton);
             }
 
@@ -44,7 +44,9 @@ namespace CS_Form
         private void SwapText(TestButton button) 
         { 
             string tempText = button.Text;
+
             button.Text = _textBox.Text;
+
             _textBox.Text = tempText;
 
             LabelTextUpdate(button.Text);
@@ -55,7 +57,13 @@ namespace CS_Form
             _testLabel.TextUpdate(str);
         }
 
+        public string ButtonLabelReplacement(string str) 
+        { 
+            string s = _textBox.TextReplacement(str);
 
+            return s;
+        
+        }
 
     }
 

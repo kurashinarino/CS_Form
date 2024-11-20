@@ -26,5 +26,14 @@ namespace CS_Form
             Size = new Size(width, height);
 
         }
+
+        public string TextReplacement(string str) 
+        {
+            string temp = Text;
+
+            Text = str;
+
+            return temp;
+        }
     }
 }
